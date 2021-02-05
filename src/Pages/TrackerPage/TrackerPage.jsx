@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import withWidth from '@material-ui/core/withWidth';
-import {TrackerDetails, TrackerMain} from '../../components'
+import {TrackerDetails, TrackerMain, Navigation} from '../../components'
 import {Provider} from '../../context/context';
 import './styles.scss';
 
@@ -10,6 +10,7 @@ export class TrackerPage extends Component {
         return (
             // initialized context 
                 <Provider>
+                    <Navigation />
                     <div>
                         {/* main tracker component to add and display transactions */}
                         <Grid className="grid" container justify="center" style={{ height: '65%'}}>

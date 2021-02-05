@@ -1,21 +1,19 @@
-import React, { Component } from 'react'
-import {Navigation} from './components'
+import React, {useContext} from 'react';
+import { LogIn, SignUp} from './components';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Redirect } from 'react-router-dom';
 import {HomePage, NewsPage, TrackerPage} from './Pages';
+import {firebaseAuth} from './context/Auth';
 
-export class App extends Component {
-  
-  render() {
+function App () {
+  const {token} = useContext(firebaseAuth);
     return (
       <div>
         <Router>
-          <Navigation />
+          
           <Switch>
-            <Route exact path="/" render={() => {
-              return (
-                <Redirect to="/home" />)}}
-            />
+            <Route exact path='/' render={rProps => !!token ? <HomePage /> : <LogIn />} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/login" exact component={LogIn} />
             <Route
               path="/home"
               render={(props) => <HomePage {...props} />}
@@ -32,7 +30,6 @@ export class App extends Component {
         </Router>
       </div>
     )
-  }
 }
 
 export default App;

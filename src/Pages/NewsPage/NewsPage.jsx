@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NewsCard from '../../components/NewsCard/NewsCard'
 import Axios from 'axios';
 import dateFormat from '../../utils/dateFormat'
-import {SearchForm} from '../../components';
+import {SearchForm, Navigation} from '../../components';
 
 const API_URL = 'https://finnhub.io/api/v1/';
 
@@ -48,6 +48,7 @@ export class NewsPage extends Component {
     render() {
         return (
             <div>
+                <Navigation />
                 <SearchForm submitHandler={this.getCompanyNews}/>
                 <NewsCard  data={this.state.data} />
             </div>

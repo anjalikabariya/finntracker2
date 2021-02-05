@@ -1,9 +1,10 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import 'firebase/auth';
 
 const fireBaseConfig = {
 	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  apiKey: "AIzaSyAL-9Qqh8oPHiLpiEGjZvl_9FrfCK3q1Ww",
+    apiKey: "AIzaSyAL-9Qqh8oPHiLpiEGjZvl_9FrfCK3q1Ww",
     authDomain: "finntracker2.firebaseapp.com",
     projectId: "finntracker2",
     storageBucket: "finntracker2.appspot.com",
@@ -12,5 +13,7 @@ const fireBaseConfig = {
     measurementId: "G-PZKX15PVRG"
 }
 firebase.initializeApp(fireBaseConfig)
+firebase.auth();
+
 export default firebase;
 
