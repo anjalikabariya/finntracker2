@@ -1,8 +1,8 @@
 import './styles.scss';
 import React from 'react'
 
-var CanvasJSReact = require('canvasjs-react-charts');
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+var CanvasJSChart = require('canvasjs-react-charts');
+// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 function Chart({stockData}) {
     return (
