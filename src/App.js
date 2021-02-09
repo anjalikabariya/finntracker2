@@ -11,20 +11,20 @@ function App () {
         <Router>
           
           <Switch>
-            <Route exact path='/' render={rProps => !!token ? <HomePage /> : <LogIn />} />
+            <Route exact path='/' render={rProps => !!token ? <HomePage {...rProps}/> : <LogIn />} />
             <Route path="/signup" component={SignUp} />
             <Route path="/login" exact component={LogIn} />
             <Route
               path="/home"
-              render={(props) => <HomePage {...props} />}
+              render={rProps => !!token ? <HomePage {...rProps}/> : <LogIn />} 
             />
             <Route
               path="/news"
-              render={(props) => <NewsPage {...props} />}
+              render={rProps => !!token ? <NewsPage {...rProps}/> : <LogIn />} 
             />
             <Route
               path="/tracker"
-              render={(props) => <TrackerPage {...props} />}
+              render={rProps => !!token ? <TrackerPage {...rProps}/> : <LogIn />} 
             />
           </Switch>
         </Router>
