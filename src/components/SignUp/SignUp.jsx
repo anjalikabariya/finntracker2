@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {firebaseAuth} from '../../context/Auth';
+import logo from '../../Assets/logo.svg';
 
 export default function SignUp() {
     const {handleSignup, inputs, setInputs, errors} = useContext(firebaseAuth);
-    // console.log(handleSignup);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,24 +19,29 @@ export default function SignUp() {
     }
 
     return (
-        <div className="signup">
-            <div className="signup__title">Sign Up</div>
-            <form className="form" onSubmit={handleSubmit}>
+        <div className="login flex--column">
+            <div className="login__title flex--column">
+                <img src={logo} />
+                Hey Stocker!
+            </div>
+            <form className="form flex--column" onSubmit={handleSubmit}>
                 <div className="form__group">
-                    <label htmlFor="email">Email</label>
-                    <input onChange={handleChange} name="email" id="email" type="email" value={inputs.email} required/>
+                    <input onChange={handleChange} placeholder="Username" className="input" name="email" id="email" type="email" value={inputs.email} required/>
                 </div>
 
                 <div className="form__group">
-                    <label htmlFor="password">Password</label>
-                    <input onChange={handleChange} name="password" id="password" type="password" value={inputs.password} required/>
+                    <input className="input" placeholder="Password" onChange={handleChange} name="password" id="password" type="password" value={inputs.password}  required/>
                 </div>
-                
-                <button type="submit">Sign Up</button>
-                {/* todo: filter duplicate error messages */}
+
+                <button className="button-blue" type="submit">Sign Up</button>
                 {errors.length > 0 ? errors.map(error => <p>{error}</p>) : null}
             </form>
-            <Link to="/login">Already have an account? Log in</Link>
-        </div>
+
+            <Link to="/login">
+                <button type="submit" className="button-white">
+                    Already have an account? Login
+                </button>
+        </Link>
+    </div>
     )
 }

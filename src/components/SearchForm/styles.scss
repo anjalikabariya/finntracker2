@@ -1,26 +1,12 @@
 .search {
-    margin-bottom: 40px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     color:white;
-}
-label {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}    
-input {
-    margin:1rem;
-    font-size: 14px;
-    background-color: #FAFAFA;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-    height: 48px;
-    width: 100%;
-    transition: outline-color 0.5s;
-    padding: 2px 0 0 13px;
-    margin-bottom: 10px;
+    &__input{
+        background: #F2F3F7;
     }
+}
 button {
     margin:1rem;
     font-size: 17px;

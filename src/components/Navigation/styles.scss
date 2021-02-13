@@ -1,29 +1,52 @@
 .nav{
+
     &__container{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        width: 100%;
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
     }
     &__logo{
         height: 100%;
-        width: 25%;
+        width: 50%;
         &--container{
             display: flex;
             justify-content: center;
             margin-top: 5px;
             height: 6rem;
         }
+        &--icon{
+            background: #F2F3F7;
+            /* Drop Shadow / Default button */
+            box-shadow: 6px 6px 16px #BECDE2, -6px -6px 16px #FFFFFF;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &--button{
+        background: #3F62C1;
+        box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.25), inset 10px 10px 15px #1A40AB;
+        border-radius: 4px;
+        width: 100%;
+        text-decoration: underline;
     }
     &__menu{
         display: flex;
         justify-content: space-between;
         &-link{
+            width: 100%;
             color: white;
             font-weight: bold;
             font-size: 2rem;
-            padding:5px;
-            margin: 2rem;
+            // padding:5px;
+            margin: 0.5rem;
             &--active{
-                border:5px solid white;
+                box-shadow: 6px 6px 16px #BECDE2, -6px -6px 16px #FFFFFF;
             }
        }
     }

@@ -10,9 +10,7 @@ function SearchForm({submitHandler}) {
       }
     return (
         <form onSubmit={searchRes} className="search">
-            <input className="search__input" type="text" placeholder="Search e.g. APPLE, MSFT" name="title" >
-            </input>
-            <button className="search__button" type="submit">SEARCH</button>
+            <input className="search__input" type="text" placeholder="Search e.g. APPLE, MSFT" name="title" />
         </form>
     )
 }

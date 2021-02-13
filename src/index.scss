@@ -1,10 +1,78 @@
 #root, body, html {
     height: 100%;
     margin: 0;
+    font-family: Roboto;
 }
 
 body {
     padding: 1.5rem;
-    background-color: black;
+    background-color: #c7c7c7;
     background-size: cover;
+    color: #456078;
+}
+button{
+    width: 12em;
+    height: 60px;
+    border-radius: 4px;
+}
+.button-white{
+    /* Medium / Color 1 */
+    color: #456078;
+    background: #F2F3F7;
+    /* Drop Shadow / Default button */
+    box-shadow: 6px 6px 16px #BECDE2, -6px -6px 16px #FFFFFF;
+}
+.button-blue{
+    background: #4070F4;
+    /* Drop Shadow / Default button */
+    box-shadow: 6px 6px 16px #BECDE2, -6px -6px 16px #FFFFFF;
+    border-radius: 4px;
+}
+input{
+    margin:1.5rem 0;
+    padding: 2px 0 0 13px;
+    width: 95vw;
+    height: 60px;
+    /* Medium / Color 1 */
+    border: 1px solid #ccc;
+    background: #F2F3F7;
+    /* Inner shadow / Input Form */
+    box-shadow: inset 4px 4px 8px rgb(140, 147, 158), inset -5px -5px 30px #FFFFFF;
+    border-radius: 4px;
+}
+.card--container{
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5em 2em;
+    background: #e7e7ee;
+    box-shadow: 6px 6px 16px #f6f7f8, -6px -6px 16px #FFFFFF;
+    border-radius: 40px;
+}
+::placeholder{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #8C94A0;
+}
+.flex--row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.flex--column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex--space-between{
+    display: flex;
+    justify-content: space-between;
 }

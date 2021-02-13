@@ -1,28 +1,12 @@
 .card{
-    &__container{
-        width: 55%;
-        max-height: auto;  
-    }
-    &__content{
-        background-color: black;
-        color: white;
-        display: flex;
+    &--content{
+        font-size: 1rem;
+        width: 100%;
+        height: auto;
+        border-radius: 40px;
     }
     &__title{
-        font-size: 1.5rem;
-        margin: 5px;
-    }
-    &__value{
-        margin:5px;
-        font-size: 1.5rem;
-    }
-    &__image{
-        display: flex;
-        justify-content: flex-end;
-        margin: 10px;
-        right: 30px;
-        position: absolute;
-        top: 118vh;
+        font-weight: 600;
     }
 }
 .display__none{
