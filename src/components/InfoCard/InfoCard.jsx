@@ -14,7 +14,7 @@ function InfoCard({title, value}) {
                                 <p>{e} : {value}</p>
                             </div> 
                         )
-                    }
+                    } else {return <></>}
                 })}
             </div>
         </div>
