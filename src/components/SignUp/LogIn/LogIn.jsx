@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import {firebaseAuth} from '../../context/Auth';
+import {firebaseAuth} from '../../../context/Auth';
 import './styles.scss';
 import logo from '../../Assets/logo.svg'
 
