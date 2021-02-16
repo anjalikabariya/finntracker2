@@ -23,10 +23,11 @@ const useItems = () => {
 // function to calculate total balance on tracker page
 const useBalance = () => {
   //initialize hook to modify balance
-  const [bal, setBal] = useState([]) 
-  let total = 0;
+  const [bal, setBal] = useState(0) 
+  
   //define actions to be taken based on type of transaction
   useEffect(() => {
+    let total = 0;
     //query to select transactions from firestore documents with type "Purchase"
     var purchaseQuery = firebase.firestore().collection("transactions").where('type','==','Purchase')
     purchaseQuery.get().then(

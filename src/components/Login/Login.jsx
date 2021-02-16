@@ -1,19 +1,17 @@
 import React, {useContext} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {firebaseAuth} from '../../context/Auth';
 import './styles.scss';
 import logo from '../../Assets/logo.svg'
 
 
-function LogIn() {
-    const history = useHistory();
+export default function LogIn() {
     const {handleSignin, inputs, setInputs, errors} = useContext(firebaseAuth);
-    // setInputs("");
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('handleSubmit');
         handleSignin();
-        history.push("/");
     }
 
     const handleChange = (e) => {
@@ -37,7 +35,7 @@ function LogIn() {
                     <input className="input" placeholder="Password" onChange={handleChange} name="password" id="password" type="password" value={inputs.password}  required/>
                 </div>
 
-                <div className="flex--row"><button className="button-blue" type="submit">Login</button></div>
+                <div className="flex--row"> <button className="button-blue" type="submit">Login</button></div>
                 {errors.length > 0 ? errors.map(error => <p>{error}</p>) : null}
             </form>
 
@@ -49,6 +47,6 @@ function LogIn() {
     </div>
     )
 }
-export default LogIn();
+
 
 

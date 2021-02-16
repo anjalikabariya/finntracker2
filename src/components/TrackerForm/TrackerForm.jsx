@@ -33,7 +33,7 @@ const TrackerForm = () => {
             <Grid className="grid" container spacing={4} justify="center">
                 <Grid item xs={6} >
                     <select value={formData.type}  className="dropdown" onChange={(e) => setFormData({ ...formData, type: e.target.value })} >
-                        <option selected="selected" >Transaction Type</option>
+                        <option defaultValue="selected" >Transaction Type</option>
                         <option value="Purchase">Purchase</option>
                         <option value="Sale">Sale</option>
                     </select>
