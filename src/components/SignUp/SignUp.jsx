@@ -21,7 +21,7 @@ export default function SignUp() {
     return (
         <div className="login flex--column">
             <div className="login__title flex--column">
-                <img src={logo} />
+                <img src={logo} alt="logo" />
                 Hey Stocker!
             </div>
             <form className="form flex--column" onSubmit={handleSubmit}>
@@ -33,11 +33,11 @@ export default function SignUp() {
                     <input className="input" placeholder="Password" onChange={handleChange} name="password" id="password" type="password" value={inputs.password}  required/>
                 </div>
 
-                <button className="button-blue" type="submit">Sign Up</button>
+                <div className="flex--row"><button className="button-blue" type="submit">Sign Up</button></div>
                 {errors.length > 0 ? errors.map(error => <p>{error}</p>) : null}
             </form>
 
-            <Link to="/login">
+            <Link to="/login" className="flex--row">
                 <button type="submit" className="button-white">
                     Already have an account? Login
                 </button>

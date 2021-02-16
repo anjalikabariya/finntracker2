@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles.scss';
-import dateFormat from '../../utils/dateFormat';
 
 function NewsHeaderCard ({href, title, author, date, thumbnail, tags}) {
     return(
@@ -8,7 +7,7 @@ function NewsHeaderCard ({href, title, author, date, thumbnail, tags}) {
 	      <div className="card card--float">
 			<div className="news--card">
 				<div className="news--image-container">
-					<img src={thumbnail} className="news--image" ></img>
+					<img alt="news" src={thumbnail} className="news--image" ></img>
 				</div>
 				<div className="news--content flex--column">
 					<div className="news--author">{author}</div>

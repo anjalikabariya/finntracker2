@@ -10,3 +10,12 @@
         justify-content: center;
     }
 }
+.form__group{
+    display: flex;
+    justify-content: center;
+    width:auto;
+    padding:0 25% ;
+    @media screen and (max-width: 1100px) {
+        padding: 0 20%;
+    }
+}

@@ -1,4 +1,6 @@
 .card {
+  height: auto;
+  margin-bottom: 1em;
   transition: 0.25s;
   &--float:hover {
     transform: translateY(-8px);

@@ -3,11 +3,12 @@ import { TextField, Grid, Button, FormControl, InputLabel, Select, MenuItem } fr
 import { v4 as uid } from 'uuid';
 import dateFormat from '../../utils/dateFormat';
 import {TrackerContext} from '../../context/context';
+import './styles.scss';
 
 const initialState = {
   amount: '',
   stockName: '',
-  type: 'Sale',
+  type: '',
   date: dateFormat(new Date()),
 };
 
@@ -27,28 +28,28 @@ const TrackerForm = () => {
     setFormData(initialState);
   };     
   return (
-        <div>
-            <Grid container spacing={2} >
-                <Grid item xs={6}>
-                    <FormControl fullWidth>
-                        <InputLabel>Transaction Type</InputLabel>
-                        <Select value={formData.type} onChange={(e) => setFormData({ ...formData, type: e.target.value })} >
-                            <MenuItem value="Purchase">Purchase</MenuItem>
-                            <MenuItem value="Sale">Sale</MenuItem>
-                        </Select>
-                    </FormControl>
+        <div className="flex--column  card--container">
+            <div>
+            <Grid className="grid" container spacing={4} justify="center">
+                <Grid item xs={6} >
+                    <select value={formData.type}  className="dropdown" onChange={(e) => setFormData({ ...formData, type: e.target.value })} >
+                        <option selected="selected" >Transaction Type</option>
+                        <option value="Purchase">Purchase</option>
+                        <option value="Sale">Sale</option>
+                    </select>
                 </Grid>
                 <Grid item xs={6} >
-                    <TextField type="text" label="Stock Name" value={formData.stockName} onChange={(e) => setFormData({ ...formData, stockName: e.target.value })} />
+                    <input type="text" placeholder="Stock Name" value={formData.stockName} onChange={(e) => setFormData({ ...formData, stockName: e.target.value })} />
                 </Grid>
                 <Grid item xs={6}>
-                    <TextField type="number" label="Amount" value={formData.amount}  onChange={(e) => setFormData({ ...formData, amount: e.target.value })} fullWidth />
+                    <input type="number" placeholder="Amount" value={formData.amount}  onChange={(e) => setFormData({ ...formData, amount: e.target.value })} />
                 </Grid>
                 <Grid item xs={6} >
-                    <TextField variant="outlined" fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: dateFormat(e.target.value) })} />
+                    <input placeholder="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: dateFormat(e.target.value) })} />
                 </Grid>
-                <Button className="button" variant="outlined" fullWidth onClick={createTransaction}>Create</Button>
+                <button className="button-blue" variant="outlined" onClick={createTransaction}>Create</button>
             </Grid>            
+            </div>
         </div>
     )
 }

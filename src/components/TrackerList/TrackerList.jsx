@@ -30,7 +30,8 @@ const TrackerList = () => {
     transactions = useItems();
     let{deleteTransaction} = useContext(TrackerContext)
     return (
-        <div>
+        <div className="card--container">
+          <div className="">
             <MUIList dense={false} className="list">
                 {transactions && transactions.map((transaction) => (
                   // animation on list when transaction added or removed
@@ -51,6 +52,7 @@ const TrackerList = () => {
                     </Slide>
                 ))}
                 </MUIList>            
+                </div>
         </div>
     )
 }

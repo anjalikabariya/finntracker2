@@ -1,8 +1,13 @@
-.radioGroup{
-    display: flex;
-    justify-content: center;
-    margin-bottom: -10px;
-  }
-  .button{
-    margin-top: 20px;
-  }
+.dropdown{
+  margin:1.5rem 0;
+  padding: 2px 0 0 13px;
+  width: 85%;
+  height: 60px;
+  /* Medium / Color 1 */
+  border: 1px solid #ccc;
+  background: #F2F3F7;
+  /* Inner shadow / Input Form */
+  box-shadow: inset 4px 4px 8px rgb(140, 147, 158), inset -5px -5px 30px #FFFFFF;
+  border-radius: 4px;
+}
+  

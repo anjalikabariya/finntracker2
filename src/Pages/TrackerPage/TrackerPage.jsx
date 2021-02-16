@@ -9,16 +9,12 @@ export class TrackerPage extends Component {
     render() {
         return (
             // initialized context 
-                <Provider>
-                    <Navigation />
+            <Provider>
+                <Navigation />
+                <div className="flex--column">
+                    {/* main tracker component to add and display transactions */}
+                    <div className="main"><TrackerMain /></div>
                     <div>
-                        {/* main tracker component to add and display transactions */}
-                        <Grid className="grid" container justify="center" style={{ height: '65%'}}>
-                            <Grid item xs={12} sm={6} style={{color: 'white', backgroundColor: '#e91e63' }}>
-                                <TrackerMain />
-                            </Grid>
-                        </Grid>
-                        
                         <Grid className="grid" container spacing={4} justify="center">
                             {/* chart components for analyzing  portfolio */}
                             <Grid item xs={12} sm={6}>
@@ -29,7 +25,8 @@ export class TrackerPage extends Component {
                             </Grid>
                         </Grid>  
                     </div>
-                </Provider>
+                </div>
+            </Provider>
         )
     }
 }

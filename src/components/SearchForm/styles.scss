@@ -1,10 +1,9 @@
 .search {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     color:white;
     &__input{
         background: #F2F3F7;
+        width: 94vw;
     }
 }
 button {
