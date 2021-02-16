@@ -5,7 +5,7 @@ import './styles.scss';
 import logo from '../../Assets/logo.svg'
 
 
-export default function LogIn() {
+function LogIn() {
     const history = useHistory();
     const {handleSignin, inputs, setInputs, errors} = useContext(firebaseAuth);
     // setInputs("");
@@ -49,6 +49,6 @@ export default function LogIn() {
     </div>
     )
 }
-
+export default LogIn();
 
 
