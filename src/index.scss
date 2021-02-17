@@ -76,3 +76,11 @@ input{
     display: flex;
     justify-content: space-between;
 }
+.column--align-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.set--height{
+    height: 70vh;
+}

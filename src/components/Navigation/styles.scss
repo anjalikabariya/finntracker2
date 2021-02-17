@@ -1,5 +1,5 @@
 .nav{
-
+    
     &__container{
         display: flex;
         flex-direction: row;
@@ -50,4 +50,14 @@
             }
        }
     }
+}
+.theme--icon{
+    background: #F2F3F7;
+    /* Drop Shadow / Default button */
+    width: 12em;
+    height: 60px;
+    border-radius: 4px;
+    box-shadow: 6px 6px 16px #BECDE2, -6px -6px 16px #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
